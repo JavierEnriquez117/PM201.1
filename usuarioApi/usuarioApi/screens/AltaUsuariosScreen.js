@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import {View,SafeAreaView,Text,TextInput,Pressable,StyleSheet,Alert,Platform} from 'react-native';
 
-
 export default function App() {
   const [nombre, setNombre] = useState('');
   const [edad, setEdad] = useState('');
@@ -23,7 +22,7 @@ export default function App() {
 
     try{
       setCargando(true);
-      const respuesta = await fetch('http://192.168.1.118:5000/v1/usuarios',
+      const respuesta = await fetch('http://10.95.199.225:5000/v1/usuarios',
         {
           method: 'POST',
           headers: {"Content-Type":"application/json"},
